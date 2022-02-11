@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- 1. 引入 js 文件 -->
+  <script src="../node_modules/react/umd/react.development.js"></script>
+  <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+
+  <script>
+    // 2. 创建 react 元素 （了解即可，创建元素比较繁琐）
+    // 参数：1> 元素名称  2> 元素属性 3> 元素子节点
+    // const title = React.createElement('h1', null, 'Hello React!')
+    const title = React.createElement('p', {title: '我是标题', id: 'p1'}, 
+      React.createElement('span', null, '我是 span 节点')
+    )
+
+    // 3. 渲染 react 元素
+    // 参数：1> 要渲染的 react 远胜于  2> 挂载点
+    ReactDOM.render(title, document.getElementById('root'))
+  </script>
+</body>
+</html>
